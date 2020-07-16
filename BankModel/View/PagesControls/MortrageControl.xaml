@@ -1,0 +1,248 @@
+﻿<UserControl x:Class="BankModel.View.PagesControls.MortrageControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="850">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.ColumnSpan="3">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="DimGray" Offset="0.0"/>
+                    <GradientStop Color="#1c1818" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.2*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition/>
+                <RowDefinition Height="0.6*"/>
+            </Grid.RowDefinitions>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label FontSize="30" Content="{Binding Path=Name}" Foreground="White"/>
+            </StackPanel>
+            <Grid Grid.Row="1" Margin="0 0 0 10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterial Kind="Database"
+                                                VerticalAlignment="Center"
+                                                Foreground="White"
+                                                Width="30"
+                                                Height="25"/>
+                        <Label Content="Минимальная сумма ипотеки:"
+                               FontSize="23"
+                               Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Margin="40 0 0 0" FontSize="23" Foreground="White" Content="{Binding Path=MinInitialSum}"/>
+                        <Label Margin="10 0 0 0" FontSize="23" Foreground="White" Content="₽"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="1">
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterial Kind="Calendar"
+                                                VerticalAlignment="Center"
+                                                Foreground="White"
+                                                Width="30"
+                                                Height="25"/>
+                        <Label Content="Минимальный срок ипотеки:"
+                                   FontSize="23"
+                                   Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Margin="40 0 0 0" FontSize="23" Foreground="White" Content="{Binding Path=MinTermEnd}"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Row="2">
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterial Kind="Percent"
+                                                VerticalAlignment="Center"
+                                                Foreground="White"
+                                                Width="30"
+                                                Height="25"/>
+                        <Label Content="Годовая ставка:"
+                                   FontSize="23"
+                                   Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Margin="40 0 0 0" FontSize="23" Foreground="White" Content="{Binding Path=AnnualRate}"/>
+                        <Label Margin="10 0 0 0" FontSize="23" Foreground="White" Content="%"/>
+                    </StackPanel>
+                </StackPanel>
+
+
+                <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="0">
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterial Kind="Database"
+                                                VerticalAlignment="Center"
+                                                Foreground="White"
+                                                Width="30"
+                                                Height="25"/>
+                        <Label Content="Максимальная сумма ипотеки:"
+                                   FontSize="23"
+                                   Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Margin="40 0 0 0" FontSize="23" Foreground="White" Content="{Binding Path=MaxInitialSum}"/>
+                        <Label Margin="10 0 0 0" FontSize="23" Foreground="White" Content="₽"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterial Kind="Calendar"
+                                                VerticalAlignment="Center"
+                                                Foreground="White"
+                                                Width="30"
+                                                Height="25"/>
+                        <Label Content="Максимальный срок ипотеки:"
+                                   FontSize="23"
+                                   Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Margin="40 0 0 0" FontSize="23" Foreground="White" Content="{Binding Path=MaxTermEnd}"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="2">
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterial Kind="Database"
+                                                VerticalAlignment="Center"
+                                                Foreground="White"
+                                                Width="30"
+                                                Height="25"/>
+                        <Label Content="Тип платежей:"
+                                   FontSize="23"
+                                   Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Margin="40 0 0 0" FontSize="23" Foreground="White" Content="{Binding Path=TypePayment}"/>
+                    </StackPanel>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="3">
+                    <StackPanel Orientation="Horizontal">
+                        <iconPacks:PackIconMaterial Kind="Database"
+                                                VerticalAlignment="Center"
+                                                Foreground="White"
+                                                Width="30"
+                                                Height="25"/>
+                        <Label Content="Первоначальный взнос:"
+                                   FontSize="23"
+                                   Foreground="White"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Margin="40 0 0 0" FontSize="23" Foreground="White" Content="От"/>
+                        <Label Margin="10 0 0 0" FontSize="23" Foreground="White" Content="{Binding Path=MinInitialFee}"/>
+                        <Label Margin="10 0 0 0" FontSize="23" Foreground="White" Content="До"/>
+                        <Label Margin="10 0 0 0" FontSize="23" Foreground="White" Content="{Binding Path=MaxInitialFee}"/>
+                        <Label Margin="10 0 0 0" FontSize="23" Foreground="White" Content="₽"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <Label Content="Расчет ипотеки" FontSize="15"
+                                   Foreground="White"></Label>
+                    <Label  Content="Сумма ипотеки:" FontSize="15"
+                                   Foreground="White"></Label>
+                    <Slider 
+                            Minimum="{Binding Path=MinInitialSum}" 
+                            Maximum="{Binding Path=MaxInitialSum}" 
+                            x:Name="sliderSum"
+                            Width="300"
+                            AutoToolTipPlacement="TopLeft"
+                            Foreground="White"
+                            HorizontalAlignment="Left"
+                            />
+                    <Label
+                               Content="Срок ипотеки:" 
+                               FontSize="15"
+                               Foreground="White"/>
+                    <DatePicker Foreground="White" Width="300"
+                                 HorizontalAlignment="Left" x:Name="datePickerCalc"/>
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="Сумма первоначального взноса:" 
+                               FontSize="15"
+                               Foreground="White"/>
+                        <Slider
+                            Minimum="{Binding Path=MinInitialFee}" 
+                            Maximum="{Binding Path=MaxInitialFee}" 
+                            x:Name="sliderFee"
+                            Width="300"
+                            AutoToolTipPlacement="TopLeft"
+                            Foreground="White"
+                            HorizontalAlignment="Left"
+                            />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Grid.Column="1" Height="170">
+                    <StackPanel>
+                        <Label Content="Сумма кредита" 
+                               FontSize="15"
+                               Foreground="White"
+                               Height="30"></Label>
+                        <Label FontSize="15" 
+                               Foreground="White"
+                               x:Name="SumCredit"></Label>
+                        <Border Width="250"
+                                Height="4"
+                                Background="White"
+                                Opacity="0.5"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <Label Content="Ежемесячный платеж" FontSize="15"
+                                   Foreground="White"
+                               Height="30"></Label>
+                        <Label FontSize="15" Foreground="White" x:Name="MonthlyPayment"></Label>
+                        <Border Width="250"
+                        Height="4"
+                        Background="White"
+                        Opacity="0.5"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <StackPanel Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button  Margin="0 0 0 20"
+                             Content="РАССЧИТАТЬ ИПОТЕКУ" 
+                             Width="750" 
+                             Height="50" 
+                             Style="{StaticResource ModernButton}"
+                             Click="Calculation_Click"
+                             FontSize="25"/>
+                <Button 
+                    x:Name="openDeposit"
+                    Width="750" 
+                    Height="50" 
+                    Content="ОФОРМИТЬ ИПОТЕКУ" 
+                    Style="{StaticResource ModernButton}"
+                    Click="OpenMortrage_Click"
+                    FontSize="25"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</UserControl>

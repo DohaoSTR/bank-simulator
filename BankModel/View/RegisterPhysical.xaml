@@ -1,0 +1,166 @@
+﻿<Window x:Class="BankModel.View.RegisterPhysical"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankModel.View" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="RegisterPhysical" Height="450" Width="380"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" MouseLeftButtonDown="Window_MouseLeftButtonDown">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.25*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Border CornerRadius="10" Grid.RowSpan="2">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Gray" Offset="0.0"/>
+                        <GradientStop Color="#1c1818" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <Button Width="50" 
+                        Height="30" 
+                        BorderBrush="Transparent" 
+                        Background="Transparent"
+                        Click="Turn_Click"
+                        >
+                    <iconPacks:PackIconMaterial Kind="CollapseAll"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Foreground="White"/>
+                </Button>
+                <Button Width="50" 
+                        Height="30" 
+                        BorderBrush="Transparent" 
+                        Background="Transparent"
+                        Click="Exit_Click"
+                        >
+                    <iconPacks:PackIconMaterial Kind="CloseCircle"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Center"
+                                                Foreground="White"/>
+                </Button>
+            </StackPanel>
+            <StackPanel Grid.Row="1" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBox FontFamily="Helvetica"
+                            FontWeight="Light"
+                            Text="Логин"
+                            FontSize="20"
+                            HorizontalAlignment="Center"
+                            Foreground="White"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="235"
+                            HorizontalContentAlignment="Left"
+                            Opacity="0.5"
+                            Height="30"
+                            Margin="63,0,0,0"
+                            x:Name="loginBox"
+                            GotFocus="LoginBox_GotFocus"
+                            LostFocus="LoginBox_LostFocus"/>
+                    <iconPacks:PackIconMaterial Kind="Account"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                       Height="2"
+                       Background="White"
+                       Opacity="0.5"/>
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <PasswordBox FontFamily="Helvetica"
+                            FontWeight="Light"
+                            Password="Password"
+                            FontSize="20"
+                            HorizontalAlignment="Center"
+                            Foreground="White"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="235"
+                            HorizontalContentAlignment="Left"
+                            Opacity="0.5"
+                            Height="30"
+                            Margin="63,0,0,0"
+                            x:Name="passwordBox"
+                            GotFocus="PasswordBox_GotFocus"
+                            LostFocus="PasswordBox_LostFocus"/>
+                    <iconPacks:PackIconMaterial Kind="FormTextboxPassword"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                       Height="2"
+                       Background="White"
+                       Opacity="0.5"/>
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBox FontFamily="Helvetica"
+                            FontWeight="Light"
+                            Text="Имя"
+                            FontSize="20"
+                            HorizontalAlignment="Center"
+                            Foreground="White"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="235"
+                            HorizontalContentAlignment="Left"
+                            Opacity="0.5"
+                            Height="30"
+                            Margin="63,0,0,0"
+                            x:Name="name"
+                            GotFocus="Name_GotFocus"
+                            LostFocus="Name_LostFocus"/>
+                    <iconPacks:PackIconMaterial Kind="ViewCompactOutline"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                       Height="2"
+                       Background="White"
+                       Opacity="0.5"/>
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
+                    <TextBox FontFamily="Helvetica"
+                            FontWeight="Light"
+                            FontSize="20"
+                            Text="Фамилия"
+                            HorizontalAlignment="Center"
+                            Foreground="White"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="235"
+                            HorizontalContentAlignment="Left"
+                            Opacity="0.5"
+                            Height="30"
+                            Margin="63,0,0,0"
+                            x:Name="surname"
+                            GotFocus="Surname_GotFocus"
+                            LostFocus="Surname_LostFocus"/>
+                    <iconPacks:PackIconMaterial Kind="Mapbox"
+                                               VerticalAlignment="Center"
+                                               HorizontalAlignment="Center"
+                                               Foreground="White"/>
+                </StackPanel>
+                <Border Width="250"
+                       Height="2"
+                       Background="White"
+                       Opacity="0.5"/>
+                <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center" Margin="0,50,0,0">
+                    <Button Width="325" 
+                            Height="40" 
+                            Content="РЕГИСТРАЦИЯ"
+                            Style="{StaticResource ModernButton}"
+                            Click="Reg_Click">
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
+
